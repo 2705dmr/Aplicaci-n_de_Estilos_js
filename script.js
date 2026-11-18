@@ -432,6 +432,12 @@ function configurarErrores() {
     listasFiltro[k].querySelector("li").className = "seleccionado";   // "Todos"
   }
 
+    // Item "Examen" del panel: no filtra nada, solo muestra el mensaje
+  var itemExamen = document.getElementById("item-examen");
+  itemExamen.addEventListener("click", function () {
+    alert("Profesora saque 100");
+  });
+
   // 5) Si se llegó desde Categorías (errores.html?categoria=TypeError), filtrar por esa
   var categoriaUrl = new URLSearchParams(window.location.search).get("categoria");
   if (categoriaUrl !== null) {
